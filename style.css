@@ -1,0 +1,70 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+*::-webkit-input-placeholder{
+	color: #000;
+	opacity: 1;
+	font-size: 20px;
+}
+
+
+*:-moz-placeholder{
+	color: #000;
+	opacity: 1;
+	font-size: 20px;
+}
+
+
+*:-ms-input-placeholder{
+	color: #000;
+	opacity: 1;
+	font-size: 20px;
+}
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: #152D49;
+}
+.form-wrap {
+	width: 600px;
+	margin: 0 auto;
+	padding-top: 50px;
+	text-align: center;
+	padding-bottom: 50px;
+}
+input[type="text"] {
+	width: 45%;
+	display: inline-block;
+	padding: 0;
+	border: 0;
+	padding: 20px;
+	color: #000;
+	font-size: 20px;
+}
+
+.dataResult, .dataEstimate {
+	display: inline-block;
+	width: 50%;
+	height: 50px;
+	color: #fff;
+	border: none;
+	background-color: transparent;
+	border: 2px solid #fff;
+	text-align: center;
+	font-size: 15px;
+	margin-top: 20px;
+}
+.dataResult:hover, .dataEstimate:hover {
+	background-color: pink;
+}
+.viewResult, .viewmetr {
+	font-size: 40px;
+	color: #fff;
+	display: block;
+}
