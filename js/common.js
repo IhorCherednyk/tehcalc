@@ -1,5 +1,17 @@
 $(function() {
 	
+	$(".dataEstimate").on("click",function(){
+
+		$(".wrapper").css("display","none");
+		$(".printSection").css("display","block");
+		$(".btn").on("click",function(){
+			$(".printSection").css("display","none");
+			$(".wrapper").css("display","block");	
+		});
+		window.print();
+			
+	});
+
 	$(".dataResult").on("click",function(){
 		var userWidth = $(".datawidth").val();//Заданная ширина
 		var userLength = $(".datalength").val();//Заданная длина
@@ -53,6 +65,7 @@ $(function() {
 		}else {
 			$(".viewResult").text("Данные должны быть числом и больше чем 0");
 			$(".viewmetr").text("");
+
 			$(".datawidth").val("");
 			$(".datalength").val("");
 		}

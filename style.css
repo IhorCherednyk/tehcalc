@@ -1,6 +1,7 @@
 body {
 	padding: 0;
 	margin: 0;
+	position: relative;
 }
 *::-webkit-input-placeholder{
 	color: #000;
@@ -67,4 +68,26 @@ input[type="text"] {
 	font-size: 40px;
 	color: #fff;
 	display: block;
+}
+.printSection {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	margin-top: 50px;
+
+}
+.cell {
+	border: 1px solid #000000;
+	padding: 10px;
+}
+.btn {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 40px;
+	color: red;
+
 }
