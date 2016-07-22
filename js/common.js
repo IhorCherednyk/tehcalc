@@ -53,6 +53,8 @@ $(function() {
 		}else {
 			$(".viewResult").text("Данные должны быть числом и больше чем 0");
 			$(".viewmetr").text("");
+			$(".datawidth").val("");
+			$(".datalength").val("");
 		}
 
 	});
