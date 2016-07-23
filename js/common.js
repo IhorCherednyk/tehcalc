@@ -31,9 +31,10 @@ $(function() {
 	// 	$.magnificPopup.close();
 	// });
 
-	$(".dataResult").on("click",function(){
+	$(".dataResult").on("click",function(e){
 		var userWidth = $(".datawidth").val();//Заданная ширина
 		var userLength = $(".datalength").val();//Заданная длина
+		e.preventDefault();
 		if(!isNaN(userWidth) && !isNaN(userLength) && userWidth>0 && userLength>0){
 			var han = Math.round(0.35*userWidth); // Высота 
 			var n = Math.round(userLength/0.61); // колво ламелей
