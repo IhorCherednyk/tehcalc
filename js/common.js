@@ -1,22 +1,41 @@
 $(function() {
-	
-	$(".dataEstimate").on("click",function(){
-
-		$(".wrapper").css("display","none");
-		$(".printSection").css("display","block");
-		$(".btn").on("click",function(){
-			$(".printSection").css("display","none");
-			$(".wrapper").css("display","block");	
-		});
-		window.print();
+	var stba = 0;
+	$(".dataEstimate").on("click",function(e){
+		if(stba>0 && !isNaN(stba)){
+			$(".wrapper").css("display","none");
+			$(".print-wrapper").css("display","block");
+			$(".btn").on("click",function(){
+				$(".print-wrapper").css("display","none");
+				$(".wrapper").css("display","block");	
+			});
+		}else {
+			e.preventDefault();
+			$(".viewResult").text("Вы не ввели никаких данных для расчетов или не нажали кнопку Расчитать");
+		}
 			
 	});
+
+	$(".printme").on("click", function(){
+		window.print();
+	})
+
+
+	// $('.dataEstimate').magnificPopup({
+	// 	type: 'inline',
+	// 	preloader: false,
+	// 	focus: '#username',
+	// 	modal: true
+	// });
+	// $(document).on('click', '.bctn', function (e) {
+	// 	e.preventDefault();
+	// 	$.magnificPopup.close();
+	// });
 
 	$(".dataResult").on("click",function(){
 		var userWidth = $(".datawidth").val();//Заданная ширина
 		var userLength = $(".datalength").val();//Заданная длина
 		if(!isNaN(userWidth) && !isNaN(userLength) && userWidth>0 && userLength>0){
-			var han = 0.35*userWidth; // Высота 
+			var han = Math.round(0.35*userWidth); // Высота 
 			var n = Math.round(userLength/0.61); // колво ламелей
 			var l = parseFloat((n*0.61).toFixed(2));// Длинна которая будет по факту
 			var sm2 = parseFloat((userWidth*l).toFixed(2));// Площадь
@@ -53,15 +72,29 @@ $(function() {
 				fzp = sm2*100;
 			}
 
-			var stba = Stme+dpr+fzp+nepr+kran+komand; // Cтоимость ангара
+			stba = Stme+dpr+fzp+nepr+kran+komand; // Cтоимость ангара
 			var stba1m2 = parseFloat((stba/sm2).toFixed(1)); // цена за метр квадратный
-
-			$(".datawidth").val("");
-			$(".datalength").val("");
 
 			$(".viewResult").text(stba + " грн");
 			$(".viewmetr").text(stba1m2 + " грн/м2");
 
+			$("td.cell.han").text(han);
+			$("td.cell.n").text(n);
+			$("td.cell.l").text(l);
+			$("td.cell.sm2").text(sm2);
+			$("td.cell.sm2").text(sm2);
+			$("td.cell.p").text(p);
+			$("td.cell.mArc").text(mArc);
+			$("td.cell.mTorc").text(mTorc);
+			$("td.cell.mAng").text(mAng);
+			$("td.cell.Stme").text(Stme);
+			$("td.cell.mAng").text(mAng);
+			$("td.cell.dpr").text(dpr);
+			$("td.cell.fzp").text(fzp);
+			$("td.cell.nepr").text(nepr);
+			$("td.cell.kran").text(kran);
+			$("td.cell.komand").text(komand);
+			
 		}else {
 			$(".viewResult").text("Данные должны быть числом и больше чем 0");
 			$(".viewmetr").text("");

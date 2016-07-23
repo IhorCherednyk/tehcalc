@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="magnific-popup.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,55 +14,81 @@
 				<input class="datawidth" type="text" placeholder="0">
 				<input class="datalength" type="text" placeholder="0">
 				<button class="dataResult">Результат</button>
-				<button class="dataEstimate">Получить Смету</button>
+				<a class="dataEstimate" href="#printSection" target="_self">Получить Смету</a>
 			</form>
 			<span class="viewResult"></span>
 			<span class="viewmetr"></span>
 		</div>
 	</div>
-	<div class="printSection">
-		<table cellspacing="0" cellpadding="0" align="center" width="400px">
-			<tr>
-				<td class="cell" align="left" valign="top">jопана</td>
-				<td class="cell" align="right" valign="top">ккккк</td>
-			</tr>
-			<tr>
-				<td class="cell" align="left" valign="top">jопана</td>
-				<td class="cell" align="right" valign="top">ккккк</td>
-			</tr>
-			<tr>
-				<td class="cell" align="left" valign="top">jопана</td>
-				<td class="cell" align="right" valign="top">ккккк</td>
-			</tr>
-			<tr>
-				<td class="cell" align="left" valign="top">jопана</td>
-				<td class="cell" align="right" valign="top">ккккк</td>
-			</tr>
-			<tr>
-				<td class="cell" align="left" valign="top">jопана</td>
-				<td class="cell" align="right" valign="top">ккккк</td>
-			</tr>
-			<tr>
-				<td class="cell" align="left" valign="top">jопана</td>
-				<td class="cell" align="right" valign="top">ккккк</td>
-			</tr>
-			<tr>
-				<td class="cell" align="left" valign="top">jопана</td>
-				<td class="cell" align="right" valign="top">ккккк</td>
-			</tr>
-			<tr>
-				<td class="cell" align="left" valign="top">jопана</td>
-				<td class="cell" align="right" valign="top">ккккк</td>
-			</tr>
-			<tr>
-				<td class="cell" align="left" valign="top">jопана</td>
-				<td class="cell" align="right" valign="top">ккккк</td>
-			</tr>
-		</table>
-		<div class="btn">X Закрой меня</div>
+
+	<div class="print-wrapper">
+		<div id="printSection">
+			<table cellspacing="0" cellpadding="0" align="center" width="400px">
+				<tr>
+					<td class="cell" align="left" valign="top" width="300">Высота Ламели</td>
+					<td class="cell han" align="right" valign="top">0</td>
+				</tr>
+				<tr>
+					<td class="cell" align="left" valign="top">Колличество ламелей</td>
+					<td class="cell n" align="right" valign="top">0</td>
+				</tr>
+				<tr>
+					<td class="cell" align="left" valign="top">Фактическая длинна</td>
+					<td class="cell l" align="right" valign="top">0</td>
+				</tr>
+				<tr>
+					<td class="cell" align="left" valign="top">Площадь</td>
+					<td class="cell sm2" align="right" valign="top">0</td>
+				</tr>
+				<tr>
+					<td class="cell" align="left" valign="top">Длинна дуги арки</td>
+					<td class="cell p" align="right" valign="top">0</td>
+				</tr>
+				<tr>
+					<td class="cell" align="left" valign="top">mArc</td>
+					<td class="cell mArc" align="right" valign="top">0</td>
+				</tr>
+				<tr>
+					<td class="cell" align="left" valign="top">mTorc</td>
+					<td class="cell mTorc" align="right" valign="top">0</td>
+				</tr>
+				<tr>
+					<td class="cell" align="left" valign="top">mAng</td>
+					<td class="cell mAng" align="right" valign="top">0</td>
+				</tr>
+				<tr>
+					<td class="cell" align="left" valign="top">dpr</td>
+					<td class="cell dpr" align="right" valign="top">0</td>
+				</tr>
+				<tr>
+					<td class="cell" align="left" valign="top">fzp</td>
+					<td class="cell fzp" align="right" valign="top">0</td>
+				</tr>
+				<tr>
+					<td class="cell" align="left" valign="top">nepr</td>
+					<td class="cell nepr" align="right" valign="top">0</td>
+				</tr>
+				<tr>
+					<td class="cell" align="left" valign="top">kran</td>
+					<td class="cell kran" align="right" valign="top">0</td>
+				</tr>
+				<tr>
+					<td class="cell" align="left" valign="top">komand</td>
+					<td class="cell komand" align="right" valign="top">0</td>
+				</tr>
+
+			</table>
+			<span class="printme">Печатать</span>
+			
+
+		</div>
+		<span class="btn">X</span>
 	</div>
 
+
+
 	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/common.js"></script>
 </body>
 </html>
